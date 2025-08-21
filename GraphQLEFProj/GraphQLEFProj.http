@@ -1,0 +1,14 @@
+@GraphQLEFProj_HostAddress = https://localhost:7137
+
+GET {{GraphQLEFProj_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{GraphQLEFProj_HostAddress}}/graphql
+Content-Type: application/json
+GraphQL-Require-Preflight: 1
+
+{
+  "query": "{ Menus { ID Name Description Price } }"
+}
